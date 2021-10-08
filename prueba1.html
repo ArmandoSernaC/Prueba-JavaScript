@@ -126,32 +126,32 @@
             <div class="px-2" style="position:relative; text-align: center; justify-content: center;"> 
               <h4 >Información Fruta</h4>   
                 <div>  
-                  <form class="row g-3">                    
+                  <form class="row g-3" id="infofrutaFormReg">                    
                     <div class="col-12 form-floating">
-                      <input type="text" class="form-control" id="idreg" placeholder="Identificación">
-                      <label for="idreg" >Id:</label>
+                      <input type="text" class="form-control" id="idfrutreg" name="idfrutreg" placeholder="Identificación">
+                      <label for="idfrutreg" >Id:</label>
                       
                     </div>
                     <div class="col-12 form-floating">
 
-                      <input type="text" class="form-control" id="namereg" placeholder="Nombre">
-                      <label for="namereg" >Nombre:</label>                      
+                      <input type="text" class="form-control" id="namefrutareg" name="namefrutareg" placeholder="Nombre">
+                      <label for="namefrutareg" >Nombre:</label>                      
                     </div>
                     <div class="col-md-6 form-floating">
-                      <input type="number" class="form-control" id="UnitCost" placeholder="Precio unitario">
-                      <label for="UnitCost" >Precio unitario</label>
+                      <input type="number" class="form-control" id="unitCostreg" name="unitCostreg" placeholder="Precio unitario">
+                      <label for="unitCostreg" >Precio unitario</label>
                       
                     </div>
                     <div class="col-md-6 form-floating">
 
-                      <input type="number" class="form-control" id="Cantidad" placeholder="Cantidad">
-                      <label for="Cantidad" >Cantidad</label>
+                      <input type="number" class="form-control" id="cantidadreg" name="cantidadreg" placeholder="Cantidad">
+                      <label for="cantidadreg" >Cantidad</label>
                       
                     </div>
 
                     <div class=" form-floating">                      
-                      <input type="number" class="form-control" id="totalCost"placeholder="Precio total" >
-                      <label for="totalCost" >Precio total</label>
+                      <input type="number" class="form-control" id="totalCostreg" name="totalCostreg" placeholder="Precio total" >
+                      <label for="totalCostreg" >Precio total</label>
                     </div>                     
                   </form>
 
@@ -163,20 +163,20 @@
             <div  class="px-2" style="position:relative; text-align: center; justify-content: center;">
               <h4  >Información Cliente</h4> 
               <div>  
-                <form class="row g-3">                    
+                <form class="row g-3" id="infoClientFormReg">                    
                   <div class="col-12 form-floating">
-                    <input type="text" class="form-control" id="idclient" placeholder="Identificación">
-                    <label for="idclient" >Identificación</label>
+                    <input type="text" class="form-control" id="idclientreg" name="idclientreg" placeholder="Identificación">
+                    <label for="idclientreg" >Identificación</label>
                     
                   </div>
                   <div class="col-12 form-floating">
 
-                    <input type="text" class="form-control" id="nameclient" placeholder="Nombre">
-                    <label for="nameclient" >Nombre </label>                      
+                    <input type="text" class="form-control" id="nameclientreg" name="nameclientreg" placeholder="Nombre">
+                    <label for="nameclientreg" >Nombre </label>                      
                   </div>
                   <div class="col-md-12 form-floating">
-                    <label class="visually-hidden" for="vendedor">Vendedor</label>
-                      <select class="form-select" id="vendedor">
+                    <label class="visually-hidden" for="vendedorreg">Vendedor</label>
+                      <select class="form-select" id="vendedorreg" name="vendedorreg">
                       <option selected>Seleccionar vendedor</option>
                       <option value="1">Vendedor 1</option>
                       <option value="2">Vendedor 2</option>
