@@ -83,11 +83,11 @@
       <div class="Panel-Encabezado   " style="width: 1360px;">
         <div class="d-flex _3mYbO px-5 align-self-center Texto-encabezado">
           <H1>
-            Mis Ventas
+            Mis Frutas
           </H1>
         </div>
         <div  class="d-flex px-5">
-          <button type="button" class="btn btn-primary rounded-pill" id="liveAlertBtn" onclick="cargarFrutas()">
+          <button type="button" class="btn btn-primary rounded-pill" id="liveAlertBtn" onclick="showForm()">
             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="buttonnext246841004__prefix" data-hook="prefix-icon"><path d="M12 12L12 6 11 6 11 12 5 12 5 13 11 13 11 19 12 19 12 13 18 13 18 12z"></path></svg> Registrar nueva venta</button>
         </div>
 
@@ -116,7 +116,101 @@
 
       <!-- Formulario registro -->
       <div class="Formulario-registrar shadow   Texto-encabezado rounded bg-white w-50"  id = "reg-form">
-      
+        <div>
+          <div>
+            <h3 style=" position: relative; text-align: center; justify-content: center;">
+              Registrar Fruta
+            </h3>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-around;">
+            <div class="px-2" style="position:relative; text-align: center; justify-content: center;"> 
+              <h4 >Información Fruta</h4>   
+                <div>  
+                  <form class="row g-3">                    
+                    <div class="col-12 form-floating">
+                      <input type="text" class="form-control" id="idreg" placeholder="Identificación">
+                      <label for="idreg" >Id:</label>
+                      
+                    </div>
+                    <div class="col-12 form-floating">
+
+                      <input type="text" class="form-control" id="namereg" placeholder="Nombre">
+                      <label for="namereg" >Nombre:</label>                      
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="number" class="form-control" id="UnitCost" placeholder="Precio unitario">
+                      <label for="UnitCost" >Precio unitario</label>
+                      
+                    </div>
+                    <div class="col-md-6 form-floating">
+
+                      <input type="number" class="form-control" id="Cantidad" placeholder="Cantidad">
+                      <label for="Cantidad" >Cantidad</label>
+                      
+                    </div>
+
+                    <div class=" form-floating">                      
+                      <input type="number" class="form-control" id="totalCost"placeholder="Precio total" >
+                      <label for="totalCost" >Precio total</label>
+                    </div>                     
+                  </form>
+
+                  
+                </div>               
+              
+            </div>
+
+            <div  class="px-2" style="position:relative; text-align: center; justify-content: center;">
+              <h4  >Información Cliente</h4> 
+              <div>  
+                <form class="row g-3">                    
+                  <div class="col-12 form-floating">
+                    <input type="text" class="form-control" id="idclient" placeholder="Identificación">
+                    <label for="idclient" >Identificación</label>
+                    
+                  </div>
+                  <div class="col-12 form-floating">
+
+                    <input type="text" class="form-control" id="nameclient" placeholder="Nombre">
+                    <label for="nameclient" >Nombre </label>                      
+                  </div>
+                  <div class="col-md-12 form-floating">
+                    <label class="visually-hidden" for="vendedor">Vendedor</label>
+                      <select class="form-select" id="vendedor">
+                      <option selected>Seleccionar vendedor</option>
+                      <option value="1">Vendedor 1</option>
+                      <option value="2">Vendedor 2</option>
+                      <option value="3">Vendedor 3</option>
+                      </select>
+                  </div>
+                  <div class="col-md-12 form-floating">
+                    <div   style="display: flex; align-self:baseline; flex-direction: colum;">
+                      <div  class="px-2 py-2"  style="width: 110px; position: relative ;left: 18%; justify-content: center;">
+                        <button type="button" class="btn btn-outline-danger rounded-pill" id="CancelarregisBtn" onclick="cancelar()">
+                          Cancelar
+                        </button>
+                      </div>
+                      <div  class="px-2 py-2" style="width:  110px; position: relative ;left: 19%; justify-content: center;">
+                        <button type="button" class="btn btn-outline-primary rounded-pill" id="ConfirmarregisBtn" onclick="">
+                          Aceptar 
+                        </button>
+                      </div>
+            
+                    </div>
+
+                  </div>
+                                      
+                </form>
+
+                
+              </div>  
+
+            </div>
+          </div>
+          
+
+        </div>
+        
       </div>
 
       <!-- Formulario editar registro -->

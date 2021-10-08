@@ -1,5 +1,9 @@
 var Tregistro = document.getElementById("Tabla-registro");
 var Eregistro = document.getElementById("liveAlertBtn");
+var Pregistro = document.getElementById("reg-form");
+var Pregistro2 = document.getElementById("reg-form2");
+var infodata = document.getElementById("Info-nodata");
+
 var lista_frutas = [];
 
 let agregarFecha = () =>{
@@ -70,15 +74,26 @@ agregarFruta(fruta1);
 agregarFruta(crearFruta("7865y3k", "Pera", 58696));
 
 let showForm = () => {
-    document.getElementById("reg-form").style.display="block";
-}
+    Pregistro.style.display="block";
+    infodata.style.display = "none";
 
- 
+}
+function cancelar(){
+    Pregistro.style.display="none";
+    if(lista_frutas.length>0){
+        cargarFrutas();
+    }
+    else{
+        infodata.style.display = "flex";
+    }
+    
+    
+} 
 
 function cargarFrutas(){
     
     if(lista_frutas.length>0){
-        document.getElementById("Info-nodata").style.display = "none";
+        infodata.style.display = "none";
         for(let fruta in lista_frutas ){  
             let newlistaRow = Tregistro.insertRow(-1);
             let newlistaCell = newlistaRow.insertCell(0);
@@ -134,7 +149,7 @@ function cargarFrutas(){
             
         
     } else{
-        document.getElementById("Info-nodata").style.display = "block";
+        infodata.style.display = "block";
         
     }
     
