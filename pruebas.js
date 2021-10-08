@@ -149,8 +149,8 @@ function insertarFruta(fruta){
 
         infodata.style.display = "none"; 
         Pregistro.style.display= "none"; 
-        formClientereg.remove;
-        formFrutareg.remove;           
+        formClientereg.reset();
+        formFrutareg.reset();           
             let newlistaRow = Tregistro.insertRow(1);
             let newlistaCell = newlistaRow.insertCell(0);
             newlistaCell.textContent = fruta.id
@@ -205,6 +205,23 @@ function insertarFruta(fruta){
         </div>` )
 
 
+        //Eventos
+        let  botoneinfo = document.getElementById(`info-${fruta.id }`)
+        let  botoneditar = document.getElementById(`edit-${fruta.id }`)
+
+        botoneditar.addEventListener("click", (event1) =>{
+            showForm()
+            } 
+        )
+
+        let  botoneborrar = document.getElementById(`delete-${fruta.id }`)
+
+        botoneborrar.addEventListener("click", (event) =>{
+            event.target.parentNode.parentNode.parentNode.parentNode.parentNode.remove()             
+            eliminarFruta(fruta.id)
+            } 
+        )
+
     }
 
 function cargarFrutas(){
@@ -220,8 +237,4 @@ function cargarFrutas(){
 }
 
 //--------------------------------------------------------------------------------------
-let eleminar1 = ()=>{
-    if(lista_frutas.length>0){
-       eliminarFruta(lista_frutas[0].id)
-    }
- }
+ 
