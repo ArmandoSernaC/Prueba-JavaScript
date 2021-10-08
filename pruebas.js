@@ -97,8 +97,13 @@ function eliminarFruta(id){
         //console.log(fruta )
         if (lista_frutas[fruta].id == id){
             lista_frutas.splice(fruta, 1);
+            if (lista_frutas.length==0){
+                infodata.style.display="flex";
+            }
         }
     }
+
+
 }
  // Permite remplazar un elemento de la lista cuyo identificador
 // corresponda al pasado por parámetro. 

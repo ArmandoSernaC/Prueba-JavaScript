@@ -217,7 +217,100 @@
 
       <!-- Formulario editar registro -->
       <div class="Formulario-registrar Texto-encabezado rounded" id = "edit-form">
+        <div>
+          <div>
+            <h3 style=" position: relative; text-align: center; justify-content: center;">
+              Registrar Fruta
+            </h3>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-around;">
+            <div class="px-2" style="position:relative; text-align: center; justify-content: center;"> 
+              <h4 >Información Fruta</h4>   
+                <div>  
+                  <form class="row g-3" id="infofrutaFormEdit">                    
+                    <div class="col-12 form-floating">
+                      <input type="text" class="form-control" id="idfrutEdit" name="idfrutEdit" placeholder="Identificación">
+                      <label for="idfrutEdit" >Id:</label>
+                      
+                    </div>
+                    <div class="col-12 form-floating">
 
+                      <input type="text" class="form-control" id="namefrutaEdit" name="namefrutaEdit" placeholder="Nombre">
+                      <label for="namefrutaEdit" >Nombre:</label>                      
+                    </div>
+                    <div class="col-md-6 form-floating">
+                      <input type="number" class="form-control" id="unitCostEdit" name="unitCostEdit" placeholder="Precio unitario">
+                      <label for="unitCostEdit" >Precio unitario</label>
+                      
+                    </div>
+                    <div class="col-md-6 form-floating">
+
+                      <input type="number" class="form-control" id="cantidadEdit" name="cantidadEdit" placeholder="Cantidad">
+                      <label for="cantidadEdit" >Cantidad</label>
+                      
+                    </div>
+
+                    <div class=" form-floating">                      
+                      <input type="number" class="form-control" id="totalCostEdit" name="totalCostEdit" placeholder="Precio total" >
+                      <label for="totalCostEdit" >Precio total</label>
+                    </div>                     
+                  </form>
+
+                  
+                </div>               
+              
+            </div>
+
+            <div  class="px-2" style="position:relative; text-align: center; justify-content: center;">
+              <h4  >Información Cliente</h4> 
+              <div>  
+                <form class="row g-3" id="infoClientFormEdit">                    
+                  <div class="col-12 form-floating">
+                    <input type="text" class="form-control" id="idclientEdit" name="idclientEdit" placeholder="Identificación">
+                    <label for="idclientEdit" >Identificación</label>
+                    
+                  </div>
+                  <div class="col-12 form-floating">
+
+                    <input type="text" class="form-control" id="nameclientEdit" name="nameclientEdit" placeholder="Nombre">
+                    <label for="nameclientEdit" >Nombre </label>                      
+                  </div>
+                  <div class="col-md-12 form-floating">
+                    <label class="visually-hidden" for="vendedorEdit">Vendedor</label>
+                      <select class="form-select" id="vendedorEdit" name="vendedorEdit">
+                      <option selected>Seleccionar vendedor</option>
+                      <option value="1">Vendedor 1</option>
+                      <option value="2">Vendedor 2</option>
+                      <option value="3">Vendedor 3</option>
+                      </select>
+                  </div>
+                  <div class="col-md-12 form-floating">
+                    <div   style="display: flex; align-self:baseline; flex-direction: colum;">
+                      <div  class="px-2 py-2"  style="width: 110px; position: relative ;left: 18%; justify-content: center;">
+                        <button type="button" class="btn btn-outline-danger rounded-pill" id="CancelarEditBtn" onclick="cancelar()">
+                          Cancelar
+                        </button>
+                      </div>
+                      <div  class="px-2 py-2" style="width:  110px; position: relative ;left: 19%; justify-content: center;">
+                        <button type="submit" class="btn btn-outline-primary rounded-pill" id="ConfirmarEditBtn" onclick="">
+                          Aceptar 
+                        </button>
+                      </div>
+            
+                    </div>
+
+                  </div>
+                                      
+                </form>
+
+                
+              </div>  
+
+            </div>
+          </div>
+          
+
+        </div>
       </div>
 
       <!-- Panel donde se encuentra la información a mostrar/tabla -->
