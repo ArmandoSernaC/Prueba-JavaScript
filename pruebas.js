@@ -65,13 +65,13 @@ function remplazarFruta(id, Fruta){
 //Creación de las frutas 
 
 //Método 1 
-let fruta1 = crearFruta("ishsgdg566", "Manzana", 35347);
-let fruta2 = crearFruta("rsfggtt56", "Uvas", 35347);
+// let fruta1 = crearFruta("ishsgdg566", "Manzana", 35347);
+// let fruta2 = crearFruta("rsfggtt56", "Uvas", 35347);
 
-agregarFruta(fruta1);
+// agregarFruta(fruta1);
 
 //Método 2 
-agregarFruta(crearFruta("7865y3k", "Pera", 58696));
+// agregarFruta(crearFruta("7865y3k", "Pera", 58696));
 
 let showForm = () => {
     Pregistro.style.display="block";
@@ -149,7 +149,7 @@ function cargarFrutas(){
             
         
     } else{
-        infodata.style.display = "block";
+        infodata.style.display = "flex";
         
     }
     
