@@ -1,5 +1,5 @@
 body{
-    background-color:  aliceblue;
+    background-color:  rgb(246, 246, 246);
     width: max-content;
 }
 
@@ -14,7 +14,7 @@ body{
 
 .Panel-registro{
     width: 85%;
-    height:400px ;
+    height:440px ;
     background-color: #fff;
     text-align: center;
 

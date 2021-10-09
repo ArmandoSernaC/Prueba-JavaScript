@@ -389,17 +389,41 @@ function cargarFrutas(){
 // Función Buscar fruta 
 //--------------------------------------------------------------------------------------
 let busqueda = (keyWord)=>{
+    let isElement = false;
     for(let fruta in lista_frutas){
         if(lista_frutas[fruta].id == keyWord || lista_frutas[fruta].nameClient  == keyWord ){
             limpiarTabla()
+            isElement = true
             insertarFruta(lista_frutas[fruta] )
             }
         }
+        if (!isElement){
+            
+            swal("Lo Sentimos!", "No hemos podido encontrar el elmento que buscas!", "warning")
+            crearBtnbuscar() 
+        }
     }
+    
 
 let crearBtnLimpiar = ()=>{
     BtnBuscar.id = "limpiar";
     BtnBuscar.innerHTML = "limpiar busqueda"
+}
+let crearBtnbuscar = ()=>{
+BtnBuscar.id = "buscarBtn1";
+   console.log(BtnBuscar.id) 
+BtnBuscar.innerHTML = `<div class="px-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+                </div>
+                <span class="align-self-center px-1">
+                Buscar
+                </span>`;
+    
+
+    console.log("se ha cambiado a modo busqueda")
+                    
 }
 
 
@@ -407,20 +431,18 @@ if(BtnBuscar){
 
     BtnBuscar.addEventListener("click", (event)=>{
         if(BtnBuscar.id == "limpiar"){
-            BtnBuscar.id = "buscarBtn1";
-            BtnBuscar.innerHTML = `<div class="px-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
-                            </div>
-                            <span class="align-self-center px-1">
-                            Buscar
-                            </span>`;
+            crearBtnbuscar()
             cargarFrutas()
+
         } else{
-            let keyWord = document.getElementById("barrabusqueda").value
-            busqueda(keyWord)
+
+            let barrabus = document.getElementById("barrabusqueda")
+            let keyWord = barrabus.value
             crearBtnLimpiar()
+            busqueda(keyWord)
+            barrabus.value = ""
+           
+            
         }
         
     })
