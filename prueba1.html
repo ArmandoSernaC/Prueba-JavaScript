@@ -21,17 +21,17 @@
         <svg  class="d-flex align-self-center mx-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
           <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0zM1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5zm2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5z"/>
         </svg>
-        <a class="navbar-brand d-flex align-self-center " href="#">          
+        <a  Style = "color: #668f80; "class="navbar-brand d-flex align-self-center " href="#">          
           KMPAD
         </a>
 
       </div>      
 
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler btns" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div  class="collapse navbar-collapse d-lg-flex justify-content-lg-end " id="navbarSupportedContent">
+      <div  class="collapse navbar-collapse d-lg-flex justify-content-lg-end " style="color: #284b63;" id="navbarSupportedContent">
         
         <ul    class="navbar-nav  pb-2 pb-lg-0   ">
           <li class="nav-item px-4  align-self-center d-lg-flex ">
@@ -80,7 +80,7 @@
       <!-- Panel donde se alberga  el contenido de la parte superior de la página, en ese panel
       a parecen el nombre de la sección donde me encuentro y el botón para registrar una nueva fruta -->
 
-      <div class="Panel-Encabezado   " style="width: 1360px;">
+      <div class="Panel-Encabezado   " style="width: 1360px;color: #668f80;">
         
         <div class="d-flex _3mYbO px-5 align-self-center Texto-encabezado">
           <H1>
@@ -89,7 +89,7 @@
         </div>
         
         <div  class="d-flex px-5">
-          <button type="button" class="btn btn-primary rounded-pill" id="liveAlertBtn" onclick="showForm()">
+          <button type="button" class="btn btns  rounded-pill" id="liveAlertBtn" onclick="showForm()" >
             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="buttonnext246841004__prefix" data-hook="prefix-icon"><path d="M12 12L12 6 11 6 11 12 5 12 5 13 11 13 11 19 12 19 12 13 18 13 18 12z"></path></svg> Registrar nueva venta</button>
         </div>
 
@@ -99,11 +99,11 @@
 
       <!-- Panel donde se encuentra la sección de busqeda -->
       <div class="Panel-Busqueda  justify-content-lg-end ">  
-        <div class=" buscador align-self-center px-2" style=" display: flex; flex-direction: row;">      
-          <input id = "barrabusqueda"class="form-control p-2 rounded-pill icon-placerholder " type="search" placeholder=" Search" aria-label="Search">
+        <div class="  align-self-center px-2" style=" display: flex; flex-direction: row;">      
+          <input id = "barrabusqueda"class="form-control p-2 rounded-pill icon-placerholder buscador " type="search" placeholder=" Search" aria-label="Search">
         </div>
         <div  class="p-2" >        
-          <button type="button" style=" display: flex; flex-direction: row;" class="btn btn-primary rounded-pill align-self-center" id="buscarBtn1"  > 
+          <button type="button" style=" display: flex; flex-direction: row;" class="btn btns rounded-pill align-self-center" id="buscarBtn1"  > 
             <div class="px-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -120,15 +120,15 @@
       <div class="Formulario-registrar shadow   Texto-encabezado rounded bg-white w-50"  id = "reg-form">
         <div>
           <div>
-            <h3 style=" position: relative; text-align: center; justify-content: center;">
+            <h3 style="color: #284b63; padding: 2%; padding-bottom: 4%; position: relative; text-align: center; justify-content: center;">
               Registrar Fruta
             </h3>
           </div>
-          <div style="display: flex; align-items: center; justify-content: space-around;">
-            <div class="px-2" style="position:relative; text-align: center; justify-content: center;"> 
-              <h4 >Información Fruta</h4>   
+          <div style="display: flex; align-items: center; justify-content: space-around; color: #284b63;">
+            <div class="px-2 " style="position:relative; text-align: center; justify-content: center;"> 
+              <h4 style="padding-bottom:4% ;" >Información Fruta</h4>   
                 <div>  
-                  <form class="row g-3" id="infofrutaFormReg">                    
+                  <form class="row g-3 buscador" id="infofrutaFormReg">                    
                     <div class="col-12 form-floating">
                       <input type="text" class="form-control" id="idfrutreg" name="idfrutreg" placeholder="Identificación">
                       <label for="idfrutreg" >Id:</label>
@@ -162,8 +162,8 @@
               
             </div>
 
-            <div  class="px-2" style="position:relative; text-align: center; justify-content: center;">
-              <h4  >Información Cliente</h4> 
+            <div  class="px-2" style=" position:relative; text-align: center; justify-content: center;">
+              <h4  style="padding-bottom:4% ;">Información Cliente</h4> 
               <div>  
                 <form class="row g-3" id="infoClientFormReg">                    
                   <div class="col-12 form-floating">
@@ -317,7 +317,7 @@
       <div class="Panel-registro shadow rounded-top" style="display: flexbox; ">
         <table class="table table-hover " id ="Tabla-registro">
           <thead id="prueba">
-            <tr class="table-hover ">
+            <tr class="table-hover " style="background-color: #353535; color: #f8f9fa;">
               <th scope="col">#Id Fruta</th>                           
               <th scope="col">Nombre Cliente </th>              
               <th scope="col">Vendedor</th>
@@ -345,10 +345,10 @@
           <div class="d-flex  " style="position: absolute; align-self:flex-baseline">
             
             <span class="p-2">
-              <p>Parece que aún no hay ningúna venta registrada</p>
+              <p>Parece que aún no hay ningúna venta registrada!</p>
               
               
-              <button type="button" class="btn btn-link" onclick="showForm()">¿Desea registrar una nueva venta?</button>
+              <button type="button" class="btn btn-link" onclick="showForm()" style="color: #668f80;">¿Desea registrar una nueva venta?</button>
             
             </span>
             

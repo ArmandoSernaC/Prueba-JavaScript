@@ -37,6 +37,7 @@ var lista_frutas = [];
 function crearFruta(form1,form2 ,type){
     let fruta = {};
     if(type == 1){
+        
         fruta = {
 
             id: form1.get("idfrutreg"),
@@ -48,8 +49,10 @@ function crearFruta(form1,form2 ,type){
             idClient:form2.get("idclientreg"),
             seller:form2.get("vendedorreg"),
             fecha:agregarFecha()
-        };
-    }else if(type == 2){
+            };
+        } 
+    else if(type == 2){
+         
         fruta = {
 
             id: form1.get("idfrutEdit"),
@@ -63,6 +66,7 @@ function crearFruta(form1,form2 ,type){
             fecha:agregarFecha()
         };
     }
+     
 	
      
     return fruta
@@ -77,9 +81,14 @@ function agregarFruta(fruta){
 
 function registrarFruta(Form1,Form2){
     let fruta = crearFruta(Form1,Form2,1)
-    lista_frutas.unshift(fruta)
-    insertarFruta(fruta)
-    swal("Muy bien!", "El registro se guardó correctamente!", "success");
+    if(fruta.id != ""){
+        lista_frutas.unshift(fruta)
+        insertarFruta(fruta)
+        swal("Muy bien!", "El registro se guardó correctamente!", "success");
+    }else{
+        swal("Ops!", "Parece que hubo un error al intentar registrar la venta!", "error")
+    }
+    
 }
 
 

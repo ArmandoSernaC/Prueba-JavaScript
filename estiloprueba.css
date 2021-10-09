@@ -1,5 +1,5 @@
 body{
-    background-color:  rgb(246, 246, 246);
+    background-color:  #668f80;
     width: max-content;
 }
 
@@ -20,15 +20,27 @@ body{
 
 }
 
+.buscador{
+border-color: #3c6e71;
+
+}
+
 ._3mYbO {
     z-index: 1;
     flex-grow: 1;
 }
 
+.btns{
+    background-color: #353535;
+    color: #fff;
+}
+.nav-link{
+    color: #3c6e71;
+}
 ._3q4or {
     align-items: center;
     width: fit-content;
-    box-shadow: 0 1px 5px 0 rgb(41 85 115 / 21%);
+    box-shadow: 0 1px 5px 0 #3c6e71;
     display: flex;
     height: 48px;
     justify-content: space-between;
@@ -74,10 +86,21 @@ body{
     font-family: HelveticaNeueW01-55Roma,HelveticaNeueW02-55Roma,HelveticaNeueW10-55Roma,"Helvetica Neue","Helvetica","Arial","\30E1\30A4\30EA\30AA","meiryo","\30D2\30E9\30AE\30CE\89D2\30B4 pro w3","hiragino kaku gothic pro","sans-serif";
     font-family: var(--wsr-font-family, HelveticaNeueW01-55Roma, HelveticaNeueW02-55Roma, HelveticaNeueW10-55Roma),"Helvetica Neue","Helvetica","Arial","\30E1\30A4\30EA\30AA","meiryo","\30D2\30E9\30AE\30CE\89D2\30B4 pro w3","hiragino kaku gothic pro","sans-serif";
 }
-
-
+.btn-outline-danger {
+    color: #b26e63;
+    border-color: #b26e63;
+}
+.btn-online-danger {
+    color: #FFFF;
+    border-color: #b26e63;
+}
+.btn-outline-primary {
+    color: #284b63;
+    border-color: #284b63;
+}
 .Formulario-registrar{
-    
+
+     
     position: absolute; 
     left: 26%; 
     top: 13%; 
