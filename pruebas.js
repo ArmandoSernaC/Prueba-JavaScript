@@ -63,7 +63,7 @@ function crearFruta(form1,form2 ,type){
             fecha:agregarFecha()
         };
     }
-	console.log(fruta)
+	 
     return fruta
 }
 
@@ -200,7 +200,7 @@ function insertarFruta(fruta){
 formClientereg.addEventListener("submit", function(event){
 
                 event.preventDefault();
-
+                
                 let form1 = new FormData(formFrutareg);
                 let form2 = new FormData(formClientereg);  
                 
@@ -243,7 +243,8 @@ function alert(message, type) {
 // corresponda al pasado por parámetro. 
 
 function eliminarFruta(id){
-    for (let fruta in lista_frutas){
+    let ans = confirm("Está seguro que desea eliminar la fruta seleccionada?");
+    if (ans == true){for (let fruta in lista_frutas){
         //console.log(fruta )
         if (lista_frutas[fruta].id == id){
             lista_frutas.splice(fruta, 1);
@@ -252,7 +253,8 @@ function eliminarFruta(id){
             }
         }
     }
-    document.getElementById(`delete-${id }`).parentNode.parentNode.parentNode.parentNode.parentNode.remove()     
+    document.getElementById(`delete-${id }`).parentNode.parentNode.parentNode.parentNode.parentNode.remove()    }
+
 }
 
  // Permite remplazar un elemento de la lista cuyo identificador
@@ -336,10 +338,11 @@ function cancelar(){
 formClientedit.addEventListener("submit", function(event){
 
     event.preventDefault();
-
-    let form3 = new FormData(formFrutaedit);
-    let form4 = new FormData(formClientedit);   
-    remplazarFruta(form3,form4);
+    let ans = confirm("¿Esta seguró que desea continuar?")
+    if (ans == true){let form3 = new FormData(formFrutaedit);
+        let form4 = new FormData(formClientedit);   
+        remplazarFruta(form3,form4);}
+    
                     
     
     
@@ -361,8 +364,9 @@ function cargarFrutas(){
 
     limpiarTabla()
     if(lista_frutas.length>0){
-        lista_frutas.forEach(insertarFruta(element))          
-        
+        for(let i =lista_frutas.length-1; i>=0;i--) {
+            insertarFruta(lista_frutas[i])
+        }
     } else{
         infodata.style.display = "flex";
         
@@ -380,9 +384,34 @@ let busqueda = (keyWord)=>{
             }
         }
     }
- 
 
-BtnBuscar.addEventListener("click", (event)=>{
-    let keyWord = document.getElementById("barrabusqueda").value
-    console.log(busqueda(keyWord)) 
-})
+let crearBtnLimpiar = ()=>{
+    BtnBuscar.id = "limpiar";
+    BtnBuscar.innerHTML = "limpiar busqueda"
+}
+
+
+if(BtnBuscar){
+
+    BtnBuscar.addEventListener("click", (event)=>{
+        if(BtnBuscar.id == "limpiar"){
+            BtnBuscar.id = "buscarBtn1";
+            BtnBuscar.innerHTML = `<div class="px-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                            </div>
+                            <span class="align-self-center px-1">
+                            Buscar
+                            </span>`;
+            cargarFrutas()
+        } else{
+            let keyWord = document.getElementById("barrabusqueda").value
+            busqueda(keyWord)
+            crearBtnLimpiar()
+        }
+        
+    })
+}
+
+ 
