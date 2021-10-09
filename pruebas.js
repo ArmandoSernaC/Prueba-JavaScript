@@ -25,6 +25,7 @@ const  formClientedit = document.getElementById("infoClientFormEdit");
 const  AlertPlaceholder = document.getElementById("liveAlertPlaceholder");
 
 
+const BtnBuscar = document.getElementById("buscarBtn1")
 // Declaración de funciones  
 
 // Funciones Agregar/Registrar Fruta -----------------------------------------------------------------
@@ -346,8 +347,11 @@ formClientedit.addEventListener("submit", function(event){
 }
 )
 // Funcion que nos permite limpiar la tabla
-function limpiarTabla(){
-
+function limpiarTabla(){ 
+    let numRow = document.getElementById("prueba").childElementCount
+    for( let i = 1; i< numRow; i++){
+        Tregistro.deleteRow(1)
+        }
     
 }
 
@@ -355,7 +359,7 @@ function limpiarTabla(){
 
 function cargarFrutas(){
 
-   // limpiarTabla();
+    limpiarTabla()
     if(lista_frutas.length>0){
         lista_frutas.forEach(insertarFruta(element))          
         
@@ -368,4 +372,17 @@ function cargarFrutas(){
 
 // Función Buscar fruta 
 //--------------------------------------------------------------------------------------
+let busqueda = (keyWord)=>{
+    for(let fruta in lista_frutas){
+        if(lista_frutas[fruta].id == keyWord || lista_frutas[fruta].nameClient  == keyWord ){
+            limpiarTabla()
+            insertarFruta(lista_frutas[fruta] )
+            }
+        }
+    }
  
+
+BtnBuscar.addEventListener("click", (event)=>{
+    let keyWord = document.getElementById("barrabusqueda").value
+    console.log(busqueda(keyWord)) 
+})

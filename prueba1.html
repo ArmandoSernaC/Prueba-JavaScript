@@ -100,7 +100,7 @@
       <!-- Panel donde se encuentra la sección de busqeda -->
       <div class="Panel-Busqueda  justify-content-lg-end ">  
         <div class=" buscador align-self-center px-2" style=" display: flex; flex-direction: row;">      
-          <input id = "barrabusqueda "class="form-control p-2 rounded-pill icon-placerholder " type="search" placeholder=" Search" aria-label="Search">
+          <input id = "barrabusqueda"class="form-control p-2 rounded-pill icon-placerholder " type="search" placeholder=" Search" aria-label="Search">
         </div>
         <div  class="p-2" >        
           <button type="button" style=" display: flex; flex-direction: row;" class="btn btn-primary rounded-pill align-self-center" id="buscarBtn1"  > 
@@ -316,7 +316,7 @@
       <!-- Panel donde se encuentra la información a mostrar/tabla -->
       <div class="Panel-registro shadow rounded-top" style="display: flexbox; ">
         <table class="table table-hover " id ="Tabla-registro">
-          <thead>
+          <thead id="prueba">
             <tr class="table-hover ">
               <th scope="col">#Id Fruta</th>                           
               <th scope="col">Nombre Cliente </th>              
@@ -327,8 +327,7 @@
               <th> </th>
             </tr>
           </thead>
-          <tbody id = "Tablebody">
-          </tbody>
+           
         </table>
         <div class="no-data  " id="Info-nodata">
           <div class="d-flex px-3 "  style="position: relative; align-self:flex-start; opacity:30%;">
