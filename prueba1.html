@@ -216,11 +216,11 @@
       </div>
 
       <!-- Formulario editar registro -->
-      <div class="Formulario-registrar Texto-encabezado rounded" id = "edit-form">
+      <div class="Formulario-registrar shadow   Texto-encabezado rounded bg-white w-50" id = "edit-form">
         <div>
           <div>
             <h3 style=" position: relative; text-align: center; justify-content: center;">
-              Registrar Fruta
+              Editar Fruta
             </h3>
           </div>
           <div style="display: flex; align-items: center; justify-content: space-around;">
@@ -229,7 +229,7 @@
                 <div>  
                   <form class="row g-3" id="infofrutaFormEdit">                    
                     <div class="col-12 form-floating">
-                      <input type="text" class="form-control" id="idfrutEdit" name="idfrutEdit" placeholder="Identificación">
+                      <input type="text" class="form-control" id="idfrutEdit" name="idfrutEdit" placeholder="Identificación"  readonly="true">
                       <label for="idfrutEdit" >Id:</label>
                       
                     </div>
@@ -318,11 +318,12 @@
         <table class="table table-hover " id ="Tabla-registro">
           <thead>
             <tr class="table-hover ">
-              <th scope="col">#Id Fruta</th>              
+              <th scope="col">#Id Fruta</th>                           
               <th scope="col">Nombre Cliente </th>              
               <th scope="col">Vendedor</th>
               <th scope="col">Precio Total</th>
               <th scope="col">Fecha</th>
+              <th scope="col">Nombre Fruta</th> 
               <th> </th>
             </tr>
           </thead>
